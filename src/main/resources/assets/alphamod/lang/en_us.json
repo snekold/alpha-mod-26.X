@@ -1,0 +1,13 @@
+{
+  "itemGroup.alphamod": "Example Mod Tab",
+  "block.alphamod.example_block": "Example Block",
+  "item.alphamod.example_item": "Example Item",
+
+  "alphamod.configuration.title": "Alpha - mod Configs",
+  "alphamod.configuration.section.alphamod.common.toml": "Alpha - mod Configs",
+  "alphamod.configuration.section.alphamod.common.toml.title": "Alpha - mod Configs",
+  "alphamod.configuration.items": "Item List",
+  "alphamod.configuration.logDirtBlock": "Log Dirt Block",
+  "alphamod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "alphamod.configuration.magicNumber": "Magic Number"
+}
