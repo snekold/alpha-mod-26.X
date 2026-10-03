@@ -23,7 +23,6 @@ public class ModModelProvider extends ModelProvider { // класс для ге�
 
         /* blocks */
         blockModels.createTrivialCube(ModBlocks.OPAL_BLOCK.get());// датаген опала, но только блок
-        blockModels.createTrivialCube(ModBlocks.RAW_OPAL_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.ORE_OPAL_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.OPAL_NETHER_ORE.get());

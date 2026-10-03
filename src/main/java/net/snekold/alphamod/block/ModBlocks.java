@@ -29,14 +29,6 @@ public class ModBlocks { // для каждого блока нужно заре
                     .speedFactor(1.35f)// скорость (деф = 1.0f)
             ));
 
-    public static final DeferredBlock<Block> RAW_OPAL_BLOCK = registerBlock("raw_opal_block",
-            properties -> new Block(properties.strength(4f)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.STONE)
-                    .lightLevel((state) -> 15)
-                    .explosionResistance(15.0f)
-            ));
-
     public static final DeferredBlock<Block> ORE_OPAL_BLOCK = registerBlock("ore_opal_block",
             properties -> new DropExperienceBlock(UniformInt.of(1, 10),properties.strength(2f)
                     .requiresCorrectToolForDrops()

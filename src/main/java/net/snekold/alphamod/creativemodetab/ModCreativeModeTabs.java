@@ -36,7 +36,6 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.alphamod.opal_blocks"))  // надпись (ссылка на перевод)
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.OPAL_BLOCK);
-                        output.accept(ModBlocks.RAW_OPAL_BLOCK);
                         output.accept(ModBlocks.ORE_OPAL_BLOCK);
                         output.accept(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK);
                         output.accept(ModBlocks.OPAL_NETHER_ORE);

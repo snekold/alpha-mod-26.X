@@ -30,7 +30,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         //выпадает тот же предмет, что и копается
         dropSelf(ModBlocks.OPAL_BLOCK.get());
-        dropSelf(ModBlocks.RAW_OPAL_BLOCK.get());
 
         //один предмет
         add(ModBlocks.ORE_OPAL_BLOCK.get(),

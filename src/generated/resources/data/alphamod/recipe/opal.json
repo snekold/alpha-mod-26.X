@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "opal",
+  "ingredients": [
+    "alphamod:opal_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "alphamod:opal"
+  }
+}
