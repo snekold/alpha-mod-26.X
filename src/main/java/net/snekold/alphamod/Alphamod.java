@@ -1,5 +1,8 @@
 package net.snekold.alphamod;
 
+import net.minecraft.resources.ResourceKey;
+import net.snekold.alphamod.creativemodetab.ModCreativeModeTabs;
+import net.snekold.alphamod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -31,6 +34,12 @@ public class Alphamod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        //add
+        ModCreativeModeTabs.register(modEventBus);
+
+        // add
+        ModItems.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
@@ -45,6 +54,10 @@ public class Alphamod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.OPAL); // опал в креатив таб
+            event.accept(ModItems.RAW_OPAL);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
