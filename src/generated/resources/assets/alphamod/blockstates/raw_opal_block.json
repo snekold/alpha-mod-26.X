@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "alphamod:block/raw_opal_block"
+    }
+  }
+}

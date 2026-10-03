@@ -1,6 +1,14 @@
 {
   "item.alphamod.opal": "Опал",
   "item.alphamod.raw_opal": "Необработанный Опал",
+
+  "block.alphamod.opal_block": "Блок Опала",
+  "block.alphamod.raw_opal_block": "Блок необработанного опала",
+  "block.alphamod.ore_opal_block": "Опаловая руда",
+  "block.alphamod.ore_deepslate_opal_block": "Глубинная опаловая руда",
+  "block.alphamod.opal_nether_ore": "Опаловая руда",
+  "block.alphamod.opal_end_ore": "Опаловая руда",
+
   "creativetab.alphamod.opal_items": "Опал Альфа Предмет",
   "creativetab.alphamod.opal_blocks": "Опал Альфа Блок"
 }

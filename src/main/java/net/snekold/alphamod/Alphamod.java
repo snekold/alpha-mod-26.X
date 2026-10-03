@@ -1,6 +1,7 @@
 package net.snekold.alphamod;
 
 import net.minecraft.resources.ResourceKey;
+import net.snekold.alphamod.block.ModBlocks;
 import net.snekold.alphamod.creativemodetab.ModCreativeModeTabs;
 import net.snekold.alphamod.item.ModItems;
 import org.slf4j.Logger;
@@ -34,11 +35,14 @@ public class Alphamod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        //add
+        // в конце передаем кератив таб
         ModCreativeModeTabs.register(modEventBus);
 
-        // add
+        // в конце передаем предметы
         ModItems.register(modEventBus);
+
+        // в конце передаем блоки
+        ModBlocks.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -52,11 +56,14 @@ public class Alphamod {
     private void commonSetup(FMLCommonSetupEvent event) {
     }
 
-    // Add the example block item to the building blocks tab
+    // креатив таб (уже созданный самой игрой)
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) { // раздел
             event.accept(ModItems.OPAL); // опал в креатив таб
             event.accept(ModItems.RAW_OPAL);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) { // раздел
+            event.accept(ModBlocks.OPAL_BLOCK); // опал в креатив таб, но только блок
         }
     }
 

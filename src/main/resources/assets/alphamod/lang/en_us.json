@@ -1,6 +1,15 @@
 {
   "item.alphamod.opal": "Opal",
   "item.alphamod.raw_opal": "Raw Opal",
+
+  "block.alphamod.opal_block": "Block of Opal",
+  "block.alphamod.raw_opal_block": "Block of Raw Opal",
+  "block.alphamod.ore_opal_block": "Opal Ore",
+  "block.alphamod.ore_deepslate_opal_block": "Opal Deepslate Ore",
+  "block.alphamod.opal_nether_ore": "Opal Nether Ore",
+  "block.alphamod.opal_end_ore": "Opal End Ore",
+
+
   "creativetab.alphamod.opal_items": "Opal Alpha Items",
   "creativetab.alphamod.opal_blocks": "Opal Alpha Blocks"
 }
