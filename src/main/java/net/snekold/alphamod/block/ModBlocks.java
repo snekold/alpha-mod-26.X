@@ -26,7 +26,7 @@ public class ModBlocks { // для каждого блока нужно заре
                     .sound(SoundType.METAL)   // звук
                     .lightLevel((state) -> 1) // свечение
                     .explosionResistance(30.0f)  // прочность от взрыва
-                    .speedFactor(1.2f)// скорость (деф = 1.0f)
+                    .speedFactor(1.35f)// скорость (деф = 1.0f)
             ));
 
     public static final DeferredBlock<Block> RAW_OPAL_BLOCK = registerBlock("raw_opal_block",

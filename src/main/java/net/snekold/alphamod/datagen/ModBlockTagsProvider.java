@@ -16,7 +16,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        /*
         tag(BlockTags.MINEABLE_WITH_PICKAXE) // указываем какие блоки будут добыватся киркой
                 .add(ModBlocks.OPAL_BLOCK.get())
                 .add(ModBlocks.OPAL_NETHER_ORE.get())
@@ -27,14 +26,5 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL) // но этой нужна алмазная кирка
                 .add(ModBlocks.OPAL_END_ORE.get());
-
-        */
-        tag(BlockTags.NEEDS_IRON_TOOL) // но этой нужна железная кирка
-                .add(ModBlocks.OPAL_BLOCK.get())
-                .add(ModBlocks.OPAL_NETHER_ORE.get())
-                .add(ModBlocks.OPAL_END_ORE.get())
-                .add(ModBlocks.ORE_OPAL_BLOCK.get())
-                .add(ModBlocks.RAW_OPAL_BLOCK.get())
-                .add(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get());
     }
 }
