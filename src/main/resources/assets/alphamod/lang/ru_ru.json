@@ -1,6 +1,8 @@
 {
   "item.alphamod.opal": "Опал",
-  "item.alphamod.raw_opal": "Необработанный Опал",
+
+  "item.alphamod.metal_detector": "Металлический детектор",
+  "item.alphamod.metal_detector.no_valuables": "Ничего не найдено",
 
   "block.alphamod.opal_block": "Блок Опала",
   "block.alphamod.ore_opal_block": "Опаловая руда",

@@ -19,7 +19,7 @@ public class ModModelProvider extends ModelProvider { // класс для ге�
 
         /* items */
         itemModels.generateFlatItem(ModItems.OPAL.get(), ModelTemplates.FLAT_ITEM); // датаген опала
-        itemModels.generateFlatItem(ModItems.RAW_OPAL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.METAL_DETECTOR.get(), ModelTemplates.FLAT_ITEM);
 
         /* blocks */
         blockModels.createTrivialCube(ModBlocks.OPAL_BLOCK.get());// датаген опала, но только блок
@@ -27,6 +27,7 @@ public class ModModelProvider extends ModelProvider { // класс для ге�
         blockModels.createTrivialCube(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.OPAL_NETHER_ORE.get());
         blockModels.createTrivialCube(ModBlocks.OPAL_END_ORE.get());
+
 
     }
 }

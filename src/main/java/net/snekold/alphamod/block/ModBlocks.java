@@ -21,11 +21,10 @@ public class ModBlocks { // для каждого блока нужно заре
 
 
     public static final DeferredBlock<Block> OPAL_BLOCK = registerBlock("opal_block", // название в коде
-            properties -> new Block(properties.strength(4f) // прочность
+            properties -> new Block(properties.strength(1f) // прочность
                     .requiresCorrectToolForDrops()  // указываем что нужна кирка (потом это подробно укажем в datagen)
-                    .sound(SoundType.METAL)   // звук
-                    .lightLevel((state) -> 1) // свечение
-                    .explosionResistance(30.0f)  // прочность от взрыва
+                    .sound(SoundType.GLASS)   // звук
+                    .explosionResistance(2.0f)  // прочность от взрыва
                     .speedFactor(1.35f)// скорость (деф = 1.0f)
             ));
 

@@ -26,7 +26,7 @@ public class ModCreativeModeTabs {
                     .withTabsAfter(Identifier.fromNamespaceAndPath(Alphamod.MOD_ID, "opal_blocks_tab")) //
                     .displayItems((itemDisplayParameters, output) -> { // отображаемые предметы
                         output.accept(ModItems.OPAL);
-                        output.accept(ModItems.RAW_OPAL);
+                        output.accept(ModItems.METAL_DETECTOR);
                     })
                     .build());
 

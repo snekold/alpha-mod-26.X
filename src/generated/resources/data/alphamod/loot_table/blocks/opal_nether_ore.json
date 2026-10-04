@@ -49,7 +49,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "alphamod:raw_opal"
+              "name": "alphamod:opal"
             }
           ]
         }

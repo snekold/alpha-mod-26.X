@@ -33,16 +33,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         //один предмет
         add(ModBlocks.ORE_OPAL_BLOCK.get(),
-                createOreDrop(ModBlocks.ORE_OPAL_BLOCK.get(), ModItems.RAW_OPAL.get()));
+                createOreDrop(ModBlocks.ORE_OPAL_BLOCK.get(), ModItems.OPAL.get()));
 
         add(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get(),
-                createOreDrop(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get(), ModItems.RAW_OPAL.get()));
+                createOreDrop(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get(), ModItems.OPAL.get()));
 
         //несколько предметов
         add(ModBlocks.OPAL_NETHER_ORE.get(),
-                createMultipleOreDrops(ModBlocks.OPAL_NETHER_ORE.get(), ModItems.RAW_OPAL.get(), 2, 5));
+                createMultipleOreDrops(ModBlocks.OPAL_NETHER_ORE.get(), ModItems.OPAL.get(), 2, 5));
         add(ModBlocks.OPAL_END_ORE.get(),
-                createMultipleOreDrops(ModBlocks.OPAL_END_ORE.get(), ModItems.RAW_OPAL.get(), 5, 10));
+                createMultipleOreDrops(ModBlocks.OPAL_END_ORE.get(), ModItems.OPAL.get(), 5, 10));
     }
 
     //переопределили метод и создали свой чтобы выпадало несколько предметов

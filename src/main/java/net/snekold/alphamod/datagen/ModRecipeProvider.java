@@ -57,7 +57,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModBlocks.OPAL_BLOCK.get()), has(ModBlocks.OPAL_BLOCK))
                 .group("opal")
                 .save(output);
-
+        /*
         //печка
         List<ItemLike> OPAL_SMELTABLES = List.of(ModItems.RAW_OPAL, ModBlocks.ORE_OPAL_BLOCK, //лист всех предметов, что могут плавится
                 ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK, ModBlocks.OPAL_NETHER_ORE, ModBlocks.OPAL_END_ORE);
@@ -66,6 +66,8 @@ public class ModRecipeProvider extends RecipeProvider {
         oreSmelting(OPAL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.OPAL.get(), 0.25f, 200, "azurite");
         //необычная печь
         oreBlasting(OPAL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.OPAL.get(), 0.25f, 100, "azurite");
+
+        */
     }
 
     //переопределяем метод для печки

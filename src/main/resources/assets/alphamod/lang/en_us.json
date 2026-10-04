@@ -1,6 +1,8 @@
 {
   "item.alphamod.opal": "Opal",
-  "item.alphamod.raw_opal": "Raw Opal",
+
+  "item.alphamod.metal_detector": "Metal detector",
+  "item.alphamod.metal_detector.no_valuables": "No found",
 
   "block.alphamod.opal_block": "Block of Opal",
   "block.alphamod.ore_opal_block": "Opal Ore",

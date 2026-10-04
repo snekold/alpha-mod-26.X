@@ -58,13 +58,12 @@ public class Alphamod {
 
     // креатив таб (уже созданный самой игрой)
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) { // раздел
-            event.accept(ModItems.OPAL); // опал в креатив таб
-            event.accept(ModItems.RAW_OPAL);
-        }
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) { // раздел
-            event.accept(ModBlocks.OPAL_BLOCK); // опал в креатив таб, но только блок
-        }
+        //if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) { // раздел
+        //    event.accept(ModItems.OPAL); // опал в креатив таб
+        //}
+        //if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) { // раздел
+        //    event.accept(ModBlocks.OPAL_BLOCK); // опал в креатив таб, но только блок
+        //}
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
