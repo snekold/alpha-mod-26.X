@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> { // отображаемые предметы
                         output.accept(ModItems.OPAL);
                         output.accept(ModItems.METAL_DETECTOR);
+                        output.accept(ModItems.CHIPS);
                     })
                     .build());
 

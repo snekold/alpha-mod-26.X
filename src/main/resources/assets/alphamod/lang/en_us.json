@@ -1,7 +1,8 @@
 {
   "item.alphamod.opal": "Opal",
-
   "item.alphamod.metal_detector": "Metal detector",
+  "item.alphamod.chips": "Chips",
+
   "item.alphamod.metal_detector.no_valuables": "No found",
 
   "block.alphamod.opal_block": "Block of Opal",

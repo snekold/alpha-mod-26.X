@@ -1,7 +1,8 @@
 {
   "item.alphamod.opal": "Опал",
-
   "item.alphamod.metal_detector": "Металлический детектор",
+  "item.alphamod.chips": "Чипсы",
+
   "item.alphamod.metal_detector.no_valuables": "Ничего не найдено",
 
   "block.alphamod.opal_block": "Блок Опала",

@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.redstone.Orientation;
-import net.snekold.alphamod.block.ModBlocks; // ← замени на свой класс регистрации
+import net.snekold.alphamod.block.ModBlocks;
 import org.jspecify.annotations.Nullable;
 
 public class OpalBlock extends Block {

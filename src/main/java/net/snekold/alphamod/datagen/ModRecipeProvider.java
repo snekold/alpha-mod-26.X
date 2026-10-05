@@ -6,10 +6,13 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.common.Tags;
 import net.snekold.alphamod.Alphamod;
 import net.snekold.alphamod.block.ModBlocks;
 import net.snekold.alphamod.item.ModItems;
@@ -50,6 +53,12 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', ModItems.OPAL.get()) // нужно столько то символов опала
                 .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModItems.OPAL))
                 .group("opal")
+                .save(output);
+
+        shapeless(RecipeCategory.FOOD, ModItems.CHIPS.get()) // Заменили на shapeless
+                .requires(Items.BAKED_POTATO, 2) // Просто указываем: нужно 2 штуки картофеля
+                .unlockedBy(getHasName(Items.BAKED_POTATO), has(Items.BAKED_POTATO))
+                .group("chips")
                 .save(output);
 
         shapeless(RecipeCategory.MISC, ModItems.OPAL.get(), 9) //чтобы получить 9 кусочков опала
