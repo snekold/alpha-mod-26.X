@@ -1,6 +1,5 @@
 package net.snekold.alphamod;
 
-import net.minecraft.resources.ResourceKey;
 import net.snekold.alphamod.block.ModBlocks;
 import net.snekold.alphamod.creativemodetab.ModCreativeModeTabs;
 import net.snekold.alphamod.item.ModItems;
@@ -8,9 +7,6 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;

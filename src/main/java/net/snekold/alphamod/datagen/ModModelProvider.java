@@ -27,6 +27,7 @@ public class ModModelProvider extends ModelProvider { // класс для ге�
         blockModels.createTrivialCube(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.OPAL_NETHER_ORE.get());
         blockModels.createTrivialCube(ModBlocks.OPAL_END_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.ALT_BLOCK.get());
 
 
     }

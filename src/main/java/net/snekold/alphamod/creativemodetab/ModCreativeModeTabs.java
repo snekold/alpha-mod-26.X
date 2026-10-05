@@ -40,6 +40,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK);
                         output.accept(ModBlocks.OPAL_NETHER_ORE);
                         output.accept(ModBlocks.OPAL_END_ORE);
+                        output.accept(ModBlocks.ALT_BLOCK);
                     })
                     .build());
 

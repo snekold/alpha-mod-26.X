@@ -10,6 +10,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.snekold.alphamod.Alphamod;
+import net.snekold.alphamod.block.custom.AltBlock;
+import net.snekold.alphamod.block.custom.OpalBlock;
 import net.snekold.alphamod.item.ModItems;
 
 import java.util.function.Function;
@@ -21,11 +23,10 @@ public class ModBlocks { // для каждого блока нужно заре
 
 
     public static final DeferredBlock<Block> OPAL_BLOCK = registerBlock("opal_block", // название в коде
-            properties -> new Block(properties.strength(1f) // прочность
+            properties -> new OpalBlock(properties.strength(1f) // прочность
                     .requiresCorrectToolForDrops()  // указываем что нужна кирка (потом это подробно укажем в datagen)
                     .sound(SoundType.GLASS)   // звук
                     .explosionResistance(2.0f)  // прочность от взрыва
-                    .speedFactor(1.35f)// скорость (деф = 1.0f)
             ));
 
     public static final DeferredBlock<Block> ORE_OPAL_BLOCK = registerBlock("ore_opal_block",
@@ -58,6 +59,14 @@ public class ModBlocks { // для каждого блока нужно заре
                     .sound(SoundType.STONE)
                     .lightLevel((state) -> 15)
                     .explosionResistance(60.0f)
+            ));
+
+    public static final DeferredBlock<Block> ALT_BLOCK = registerBlock("alt_block",
+            properties -> new AltBlock(properties.strength(1f)
+                    .noLootTable()
+                    .sound(SoundType.GLASS)
+                    .explosionResistance(2.0f)
+                    .speedFactor(1.35f)
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
