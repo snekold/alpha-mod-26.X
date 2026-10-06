@@ -19,6 +19,6 @@
   "toolip.alphamod.chips.toolip": "вообще-то вредные",
   "toolip.alphamod.alt_block.toolip" : "§4приватный",
 
-  "toolip.alphamod.metal_detector.shift_down": "§2Ищет железо и алмазы, вниз на -64 блоков",
+  "toolip.alphamod.metal_detector.shift_down": "§2Ищет ВСЮ руду, вниз на -64 блоков",
   "toolip.alphamod.metal_detector.shift_none": "§3Ищет руду"
 }

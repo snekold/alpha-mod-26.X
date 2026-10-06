@@ -27,5 +27,6 @@ public class AlphaModDataGen { // создание генераторов раз
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true,new ModRecipeProvider.Runner(packOutput, lookupProvider));// для рецептов
         generator.addProvider(true,new ModDataMapProvider(packOutput, lookupProvider)); // для топлива
+        generator.addProvider(true,new ModItemTagsProvider(packOutput, lookupProvider)); // для тегов (items)
     }
 }

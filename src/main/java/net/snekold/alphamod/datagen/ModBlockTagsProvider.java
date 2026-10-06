@@ -3,9 +3,11 @@ package net.snekold.alphamod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.snekold.alphamod.Alphamod;
 import net.snekold.alphamod.block.ModBlocks;
+import net.snekold.alphamod.tags.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -25,5 +27,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL) // но этой нужна алмазная кирка
                 .add(ModBlocks.OPAL_END_ORE.get());
+
+        tag(ModTags.Blocks.METAL_DETECTABLES) // наши теги для метал детектора ВСЕ РУДЫ для БЛОКОВ!!!
+                .addTag(Tags.Blocks.ORES);
     }
 }

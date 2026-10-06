@@ -20,6 +20,6 @@
   "toolip.alphamod.chips.toolip": "harmful",
   "toolip.alphamod.alt_block.toolip" : "§4private",
 
-  "toolip.alphamod.metal_detector.shift_down": "§2Looking for iron and diamonds, down -64 blocks",
+  "toolip.alphamod.metal_detector.shift_down": "§2Looking all ores, down -64 blocks",
   "toolip.alphamod.metal_detector.shift_none": "§3find ore"
 }
