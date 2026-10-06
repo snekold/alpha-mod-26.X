@@ -16,13 +16,13 @@ import java.util.List;
 public class AlphaModDataGen { // создание генераторов разных
     @SubscribeEvent
     public static void gatherClientData(GatherDataEvent.Client event) {
-        DataGenerator generator = event.getGenerator(); //для моделек
+        DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
 
-        var lookupProvider = event.getLookupProvider(); // для тегов
+        var lookupProvider = event.getLookupProvider();
 
         generator.addProvider(true,new ModModelProvider(packOutput)); // для моделек
-        generator.addProvider(true,new ModBlockTagsProvider(packOutput, lookupProvider)); // для тегов
+        generator.addProvider(true,new ModBlockTagsProvider(packOutput, lookupProvider)); // для тегов не кастом
         generator.addProvider(true,new LootTableProvider(packOutput, Collections.emptySet(), // для таблицы выпадения
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true,new ModRecipeProvider.Runner(packOutput, lookupProvider));// для рецептов
