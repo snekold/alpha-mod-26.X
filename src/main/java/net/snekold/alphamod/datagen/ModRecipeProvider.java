@@ -55,6 +55,15 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("opal")
                 .save(output);
 
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ENDER_COAL)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Items.END_STONE_BRICKS)
+                .unlockedBy(getHasName(Items.END_STONE_BRICKS), has(Items.END_STONE_BRICKS))
+                .group("end_coal")
+                .save(output);
+
         shapeless(RecipeCategory.FOOD, ModItems.CHIPS.get()) // Заменили на shapeless
                 .requires(Items.BAKED_POTATO, 2) // Просто указываем: нужно 2 штуки картофеля
                 .unlockedBy(getHasName(Items.BAKED_POTATO), has(Items.BAKED_POTATO))

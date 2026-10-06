@@ -2,6 +2,7 @@
   "item.alphamod.opal": "Opal",
   "item.alphamod.metal_detector": "Metal detector",
   "item.alphamod.chips": "Chips",
+  "item.alphamod.end_coal": "End Coal",
 
   "item.alphamod.metal_detector.no_valuables": "No found",
 
@@ -14,5 +15,11 @@
 
 
   "creativetab.alphamod.opal_items": "Opal Alpha Items",
-  "creativetab.alphamod.opal_blocks": "Opal Alpha Blocks"
+  "creativetab.alphamod.opal_blocks": "Opal Alpha Blocks",
+
+  "toolip.alphamod.chips.toolip": "harmful",
+  "toolip.alphamod.alt_block.toolip" : "§4private",
+
+  "toolip.alphamod.metal_detector.shift_down": "§2Looking for iron and diamonds, down -64 blocks",
+  "toolip.alphamod.metal_detector.shift_none": "§3find ore"
 }

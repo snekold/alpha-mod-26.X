@@ -2,6 +2,7 @@
   "item.alphamod.opal": "Опал",
   "item.alphamod.metal_detector": "Металлический детектор",
   "item.alphamod.chips": "Чипсы",
+  "item.alphamod.end_coal": "Ендер уголь",
 
   "item.alphamod.metal_detector.no_valuables": "Ничего не найдено",
 
@@ -13,5 +14,11 @@
   "block.alphamod.alt_block": "Альтернативный блок",
 
   "creativetab.alphamod.opal_items": "Опал Альфа Предмет",
-  "creativetab.alphamod.opal_blocks": "Опал Альфа Блок"
+  "creativetab.alphamod.opal_blocks": "Опал Альфа Блок",
+
+  "toolip.alphamod.chips.toolip": "вообще-то вредные",
+  "toolip.alphamod.alt_block.toolip" : "§4приватный",
+
+  "toolip.alphamod.metal_detector.shift_down": "§2Ищет железо и алмазы, вниз на -64 блоков",
+  "toolip.alphamod.metal_detector.shift_none": "§3Ищет руду"
 }

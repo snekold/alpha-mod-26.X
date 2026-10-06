@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.OPAL);
                         output.accept(ModItems.METAL_DETECTOR);
                         output.accept(ModItems.CHIPS);
+                        output.accept(ModItems.ENDER_COAL);
                     })
                     .build());
 

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "end_coal",
+  "key": {
+    "A": "minecraft:end_stone_bricks"
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "id": "alphamod:end_coal"
+  }
+}

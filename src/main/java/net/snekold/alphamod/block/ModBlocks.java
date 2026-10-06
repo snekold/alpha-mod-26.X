@@ -1,7 +1,11 @@
 package net.snekold.alphamod.block;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -14,6 +18,7 @@ import net.snekold.alphamod.block.custom.AltBlock;
 import net.snekold.alphamod.block.custom.OpalBlock;
 import net.snekold.alphamod.item.ModItems;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class ModBlocks { // для каждого блока нужно зарегистрировать предмет
@@ -67,7 +72,31 @@ public class ModBlocks { // для каждого блока нужно заре
                     .sound(SoundType.GLASS)
                     .explosionResistance(2.0f)
                     .speedFactor(1.35f)
-            ));
+            ),Component.translatable("toolip.alphamod.alt_block.toolip")); // используем перегрузку метода для кастом подсказок
+
+    //кастом подсказки (перегрузка методов, разная сигнатура)
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components) {
+        DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function); // регистрируем блок и сохраняем в переменную
+        registerBlockItem(name, toReturn, components); // передаем в наш метод снизу UPDATE - components для registerBlockItem снизу
+        return toReturn;
+    }
+
+    // "..." означает массив который можно не заполнять или можно заполнить несколько
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Component... components) { // обьявляем что блок доступен в мире
+        ModItems.ITEMS.registerItem(name, properties ->
+                new BlockItem(block.get(), properties.useBlockDescriptionPrefix()){
+                    @Override // тоже анонимный класс для расширенных подсказок для блоков
+                    public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+                        for(var component : components){ // Для каждой переданной строки текста добавить её в подсказку предмета
+                            builder.accept(component);
+                        }
+                        super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+                    }
+                });
+        //properties.useBlockDescriptionPrefix() - означает что язык блока будет block.alphamod.opal_block
+    }
+
+    // прост
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function); // регистрируем блок и сохраняем в переменную

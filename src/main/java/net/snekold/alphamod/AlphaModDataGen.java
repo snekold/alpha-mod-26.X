@@ -7,10 +7,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import net.snekold.alphamod.datagen.ModBlockLootTableProvider;
-import net.snekold.alphamod.datagen.ModBlockTagsProvider;
-import net.snekold.alphamod.datagen.ModModelProvider;
-import net.snekold.alphamod.datagen.ModRecipeProvider;
+import net.snekold.alphamod.datagen.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -29,5 +26,6 @@ public class AlphaModDataGen { // создание генераторов раз
         generator.addProvider(true,new LootTableProvider(packOutput, Collections.emptySet(), // для таблицы выпадения
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true,new ModRecipeProvider.Runner(packOutput, lookupProvider));// для рецептов
+        generator.addProvider(true,new ModDataMapProvider(packOutput, lookupProvider)); // для топлива
     }
 }

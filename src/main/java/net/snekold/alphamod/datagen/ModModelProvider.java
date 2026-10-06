@@ -21,6 +21,7 @@ public class ModModelProvider extends ModelProvider { // класс для ге�
         itemModels.generateFlatItem(ModItems.OPAL.get(), ModelTemplates.FLAT_ITEM); // датаген опала
         itemModels.generateFlatItem(ModItems.METAL_DETECTOR.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.CHIPS.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.ENDER_COAL.get(), ModelTemplates.FLAT_ITEM);
 
         /* blocks */
         blockModels.createTrivialCube(ModBlocks.OPAL_BLOCK.get());// датаген опала, но только блок
