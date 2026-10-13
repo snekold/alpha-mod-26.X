@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "alphamod:opal"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "alphamod:opal_pressure_plate"
+  }
+}

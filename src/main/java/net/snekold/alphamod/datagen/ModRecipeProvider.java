@@ -72,7 +72,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
         shapeless(RecipeCategory.MISC, ModItems.OPAL.get(), 9) //чтобы получить 9 кусочков опала
                 .requires(ModBlocks.OPAL_BLOCK) // нужен 1 блок опала
-                .unlockedBy(getHasName(ModBlocks.OPAL_BLOCK.get()), has(ModBlocks.OPAL_BLOCK))
+                .unlockedBy(getHasName(ModBlocks.OPAL_BLOCK.get()), has(ModBlocks.OPAL_BLOCK)) // из чего сделано 2 раза
                 .group("opal")
                 .save(output);
         /*
@@ -86,6 +86,22 @@ public class ModRecipeProvider extends RecipeProvider {
         oreBlasting(OPAL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.OPAL.get(), 0.25f, 100, "azurite");
 
         */
+
+        // ступеньки из опала
+        stairBuilder(ModBlocks.OPAL_STAIRS.get(), Ingredient.of(ModBlocks.OPAL_BLOCK))
+                .unlockedBy(getHasName(ModBlocks.OPAL_BLOCK.get()), has(ModBlocks.OPAL_BLOCK)) // из чего сделано 2 раза
+                .group("opal")
+                .save(output);
+        // полублоки из опала (по другому пишется хз почему)
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OPAL_SLAB.get(), ModBlocks.OPAL_BLOCK.get());
+
+        //кнопочка
+        buttonBuilder(ModBlocks.OPAL_BUTTON.get(), Ingredient.of(ModItems.OPAL))
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModItems.OPAL)) // из чего сделано 2 раза
+                .group("opal")
+                .save(output);
+        //нажимной плита
+        pressurePlate(ModBlocks.OPAL_PRESSURE_PLATE.get(), ModItems.OPAL.get());
     }
 
     //переопределяем метод для печки

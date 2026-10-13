@@ -43,6 +43,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.OPAL_NETHER_ORE);
                         output.accept(ModBlocks.OPAL_END_ORE);
                         output.accept(ModBlocks.ALT_BLOCK);
+                        output.accept(ModBlocks.OPAL_STAIRS);
+                        output.accept(ModBlocks.OPAL_SLAB);
+                        output.accept(ModBlocks.OPAL_PRESSURE_PLATE);
+                        output.accept(ModBlocks.OPAL_BUTTON);
                     })
                     .build());
 

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "alphamod:block/opal_block",
+    "side": "alphamod:block/opal_block",
+    "top": "alphamod:block/opal_block"
+  }
+}

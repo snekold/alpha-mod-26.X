@@ -30,7 +30,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         //выпадает тот же предмет, что и копается
         dropSelf(ModBlocks.OPAL_BLOCK.get());
-
         //один предмет
         add(ModBlocks.ORE_OPAL_BLOCK.get(),
                 createOreDrop(ModBlocks.ORE_OPAL_BLOCK.get(), ModItems.OPAL.get()));
@@ -43,6 +42,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createMultipleOreDrops(ModBlocks.OPAL_NETHER_ORE.get(), ModItems.OPAL.get(), 2, 5));
         add(ModBlocks.OPAL_END_ORE.get(),
                 createMultipleOreDrops(ModBlocks.OPAL_END_ORE.get(), ModItems.OPAL.get(), 5, 10));
+
+        dropSelf(ModBlocks.OPAL_STAIRS.get());
+        add(ModBlocks.OPAL_SLAB.get(), this::createSlabItemTable);// тк это полублок надо это короче чтобы когда типо из полублока - блок то тогда 2 раза выпадает тип
+        dropSelf(ModBlocks.OPAL_BUTTON.get());
+        dropSelf(ModBlocks.OPAL_PRESSURE_PLATE.get());
     }
 
     //переопределили метод и создали свой чтобы выпадало несколько предметов

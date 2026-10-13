@@ -7,6 +7,12 @@
   "item.alphamod.metal_detector.no_valuables": "No found",
 
   "block.alphamod.opal_block": "Block of Opal",
+  "block.alphamod.opal_stairs": "Opal Stairs",
+  "block.alphamod.opal_slab": "Opal Slab",
+  "block.alphamod.opal_pressure_plate": "Opal Pressure Plate",
+  "block.alphamod.opal_button": "Opal Button",
+
+
   "block.alphamod.ore_opal_block": "Opal Ore",
   "block.alphamod.ore_deepslate_opal_block": "Opal Deepslate Ore",
   "block.alphamod.opal_nether_ore": "Opal Nether Ore",

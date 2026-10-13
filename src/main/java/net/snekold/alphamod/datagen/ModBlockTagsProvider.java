@@ -23,12 +23,26 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.OPAL_NETHER_ORE.get())
                 .add(ModBlocks.OPAL_END_ORE.get())
                 .add(ModBlocks.ORE_OPAL_BLOCK.get())
-                .add(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get());
+                .add(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get())
+        ;
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL) // но этой нужна алмазная кирка
                 .add(ModBlocks.OPAL_END_ORE.get());
 
         tag(ModTags.Blocks.METAL_DETECTABLES) // наши теги для метал детектора ВСЕ РУДЫ для БЛОКОВ!!!
                 .addTag(Tags.Blocks.ORES);
+
+        // кнопку не добавляем нафиг надо
+        tag(BlockTags.STAIRS)
+                .add(ModBlocks.OPAL_STAIRS.get());
+
+        tag(BlockTags.SLABS)
+                .add(ModBlocks.OPAL_SLAB.get());
+
+        tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.OPAL_PRESSURE_PLATE.get());
+
+        tag(BlockTags.BUTTONS)
+                .add(ModBlocks.OPAL_BUTTON.get());
     }
 }

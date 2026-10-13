@@ -7,6 +7,11 @@
   "item.alphamod.metal_detector.no_valuables": "Ничего не найдено",
 
   "block.alphamod.opal_block": "Блок Опала",
+  "block.alphamod.opal_stairs": "Cтупеньки из Опала",
+  "block.alphamod.opal_slab": "Плиты из Опала",
+  "block.alphamod.opal_pressure_plate": "Опаловая нажимная плита",
+  "block.alphamod.opal_button": "Опаловая Кнопка",
+
   "block.alphamod.ore_opal_block": "Опаловая руда",
   "block.alphamod.ore_deepslate_opal_block": "Глубинная опаловая руда",
   "block.alphamod.opal_nether_ore": "Опаловая руда",

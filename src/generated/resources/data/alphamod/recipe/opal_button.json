@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "opal",
+  "ingredients": [
+    "alphamod:opal"
+  ],
+  "result": {
+    "id": "alphamod:opal_button"
+  }
+}

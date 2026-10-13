@@ -6,10 +6,12 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -74,10 +76,42 @@ public class ModBlocks { // для каждого блока нужно заре
                     .speedFactor(1.35f)
             ),Component.translatable("toolip.alphamod.alt_block.toolip")); // используем перегрузку метода для кастом подсказок
 
+    public static final DeferredBlock<Block> OPAL_STAIRS = registerBlock("opal_stairs", // ступеньки из опала (начало ужаса)
+            properties -> new StairBlock(ModBlocks.OPAL_BLOCK.get().defaultBlockState(), properties.strength(1f) // прочность и указание из какого блока будет ступеньки
+                    .requiresCorrectToolForDrops()  // указываем что нужна кирка (потом это подробно укажем в datagen)
+                    .sound(SoundType.GLASS)
+                    .explosionResistance(2.0f)
+            ));
+
+    public static final DeferredBlock<Block> OPAL_SLAB = registerBlock("opal_slab", // полублоки из опала
+            properties -> new SlabBlock(properties.strength(1f) // прочность и почему-то не указываем из какого блока состоит хз
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.GLASS)
+                    .explosionResistance(2.0f)
+            ));
+
+    public static final DeferredBlock<Block> OPAL_PRESSURE_PLATE = registerBlock("opal_pressure_plate", //из опала
+            properties -> new PressurePlateBlock(BlockSetType.IRON,properties
+                    .mapColor(MapColor.COLOR_BLUE) // какой цвет будет на мапе бумажной везде можео установить
+                    .forceSolidOn() //Заставляет игру считать блок «твердым» для определенных механик (например, для просчета спавна мобов или путей их передвижения), даже если у него отключена коллизия.
+                    .instrument(NoteBlockInstrument.BASS) // Если поставить нотный блок (Note Block) на этот блок, то нотный блок будет издавать звук баса (как на дереве).
+                    .requiresCorrectToolForDrops()
+                    .noCollision() //иначе поднимет вас
+                    .strength(0.5F) // прочность
+                    .pushReaction(PushReaction.DESTROY) //  При попытке сдвинуть блок поршнем, он не передвинется, а сразу сломается (разрушится) и выпадет в виде дропа (как факелы или цветы).
+            ));
+
+    public static final DeferredBlock<Block> OPAL_BUTTON = registerBlock("opal_button",
+            properties -> new ButtonBlock(BlockSetType.IRON, 20, properties //20 - кол во тиков чтобы была нажатой
+                    .noCollision()
+                    .strength(0.5F)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+
     //кастом подсказки (перегрузка методов, разная сигнатура)
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function); // регистрируем блок и сохраняем в переменную
-        registerBlockItem(name, toReturn, components); // передаем в наш метод снизу UPDATE - components для registerBlockItem снизу
+        registerBlockItem(name, toReturn, components); // передаем в наш метод снизу UPD - components для registerBlockItem снизу
         return toReturn;
     }
 
