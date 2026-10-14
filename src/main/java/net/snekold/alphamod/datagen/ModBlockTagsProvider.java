@@ -24,6 +24,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.OPAL_END_ORE.get())
                 .add(ModBlocks.ORE_OPAL_BLOCK.get())
                 .add(ModBlocks.ORE_DEEPSLATE_OPAL_BLOCK.get())
+                // надо добаялть кроме опала самого потому что
+                .add(ModBlocks.OPAL_STAIRS.get())
+                .add(ModBlocks.OPAL_SLAB.get())
+                .add(ModBlocks.OPAL_PRESSURE_PLATE.get());
         ;
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL) // но этой нужна алмазная кирка

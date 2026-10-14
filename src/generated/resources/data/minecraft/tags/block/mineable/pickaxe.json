@@ -4,6 +4,9 @@
     "alphamod:opal_nether_ore",
     "alphamod:opal_end_ore",
     "alphamod:ore_opal_block",
-    "alphamod:ore_deepslate_opal_block"
+    "alphamod:ore_deepslate_opal_block",
+    "alphamod:opal_stairs",
+    "alphamod:opal_slab",
+    "alphamod:opal_pressure_plate"
   ]
 }
